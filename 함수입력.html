@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function 이름(매개변수) {} 이름 뒤에 매개변수를 설정하고 화면에 출력할 때 매개변수의 값을 입력하여 값을 유동성 있게 바꾸는 것
+        // 매개변수는 여러개 설정 가능하며, return 값을 변동시켜 다른 값을 출력할 수 있음!!
+        // 매개변수 = parameter, 매개변수의 값을 입력하는 곳 = argument
+        function a(apple){
+            return apple + '말';
+        }
+        function b(banana){
+            return banana*5;
+        }
+        function c(cd, cb){
+            return cd+cb;
+        }
+
+        document.write(a('조랑'));
+        document.write('<br>');
+        document.write(b(4));
+        document.write('<br>');
+        document.write(c(5,4));
+    </script>
+</body>
+</html>
