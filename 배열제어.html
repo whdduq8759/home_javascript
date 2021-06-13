@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var li = ['a', 'b', 'c', 'd', 'e'];
+        //하나의 배열을 마지막 인덱스에 넣고 싶을 떄는 배열변수.push('');를 사용하면 된다
+        //무조건 하나만 가능!!
+        li.push('f');
+        document.write(li.length + '<br>');
+
+        //여러개의 배열을 넣고 싶을 때는 배열변수 = 배열변수.concat(['추가배열1', '추가배열2', ...]); 
+        var ab = ['가', '나', '다', '라', '마'];
+        ab = ab.concat(['바', '사']);
+        document.write(ab.length) +'<br>';
+
+        //하나의 배열을 첫번 째 인덱스(0)에 넣고 싶을 때는 배열변수.unshift('');
+        var cc = ['1', '2', '3', '4'];
+        cc.unshift('5');
+        alert(cc);
+
+        //여러가지의 배열을 원하는 위치에 넣고 싶을 때는 배열변수.splice(기존의 몇번 인덱스 번호에서, 지정한 인덱스를 인덱스1로 기준으로 하여 어디에 넣을건가, '넣을 값1', '넣을 값2', ...);
+        //지정한 인덱스를 인덱스1로 기준으로 하여 어디에 넣을건가에서
+        // 0은 기준 앞에다 추가, 1은 기준을 지우고 새로추가, 2는 그 뒤를 지우고 새로추가!!
+        // 복잡함 ㅜㅜ
+        var xx = ['a', 'b', 'c'];
+        xx.splice(1, 0, 'd','e');
+        alert(xx);
+    </script>
+</body>
+
+</html>
