@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var pattern = /a/;
+        // 검색대상을 변수로 저장한다
+        var str = 'abcde';
+        //.match(찾고자하는 문자열 변수)는 찾고자하는 문자열이 검색대상에 있나 확인하는 것 
+        str.match(pattern);
+        // = ["a"]
+        
+        var pattern = /a/;
+        // 검색대상을 변수로 저장한다        
+        var str = 'abcde';
+        // .replace(찾고자하는 문자열 변수, 바꾸고자 하는 문자열)은 찾고자하는 문자열이 있으면 그자리에 다른 문자열로 바꾸는 것
+        str.replace(pattern, A);
+        // = "Abcde"
+    </script>
+</body>
+</html>
