@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수 바깥쪽에 var을 설정하는 변수를 전역변수(global)
+        // 전역변수는 함수 안이든 밖이든 모두 사용가능!!
+        var vscope = 'global';
+        function fscope() {
+            // 함수 안쪽에 var을 설정하는 변수를 지역변수(local)
+            // 지역변수는 함수 안에서만 사용가능!!
+            var vscope = 'local';
+            alert(vscope);
+            //되도록이면 지역변수를 사용하는 것이 좋다!!
+        }
+        fscope();
+    </script>
+</body>
+</html>

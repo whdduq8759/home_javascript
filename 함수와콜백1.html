@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //함수
+        function a() {}
+        // var a = function(){}; 함수도 값이 될 수 있음
+
+        //메소드
+        // {}안에 function(){}이 들어가면 이 것을 메소드라고 함
+        a = {
+            b: function () {}
+        };
+
+        function cal(func, num) {
+            //함수도 값이기 때문에 return 값으로 들어가 또 다른 함수를 호출할 수 있음
+            return func(num)
+        }
+
+        function increase(num) {
+            return num + 1
+        }
+
+        function decrease(num) {
+            return num - 1
+        }
+        alert(cal(increase, 1));
+        alert(cal(decrease, 1));
+    </script>
+</body>
+
+</html>

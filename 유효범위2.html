@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function a() {
+        // 함수안에 var로 설정되어 있으면 지역함수, var가 없이 설정되어 있으면 전역함수
+        // 함수안에 만약 i =0;으로 설정하면 for문이 무한대로 실행됨  
+        var  i = 0;
+        }
+        for(var i=0; i<5; i++) {
+            a();
+            document.write(i);
+        }
+    </script>
+</body>
+</html>

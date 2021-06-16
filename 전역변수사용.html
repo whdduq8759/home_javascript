@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 전역변수
+        MYAPP = {}
+        // 전역변수에 연결체를 만들어서 하나의 전역변수에 여러가지를 구현할 수 있는 것
+        MYAPP.calculator = {
+            'left': null,
+            'right': null
+        }
+         // 전역변수에 연결체를 만들어서 하나의 전역변수에 여러가지를 구현할 수 있는 것
+        MYAPP.coordinate = {
+            'left': null,
+            'right': null
+        }
+
+        MYAPP.calculator.left = 10;
+        MYAPP.calculator.right = 20;
+
+        function sum() {
+            return MYAPP.calculator.left + MYAPP.calculator.right;
+        }
+        document.write(sum());
+    </script>
+</body>
+
+</html>

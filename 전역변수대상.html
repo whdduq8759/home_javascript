@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function a() {
+        //함수안에서 var 변수 = 값; 으로 설정한 것은 지역변수에 해당하며
+        //이 것은 함수 바깥쪽에서 사용하면 에러가 뜬다.
+            var i = 1;
+            alert(i);
+        }
+        a();
+
+        for(b=0; b<5; b++){
+        //함수가 아닌 for문이나 if문 등에서 var 변수 = 값; 으로 설정하는 것은 전역변수에 해당하며
+        //이 것은 함수 바깥쪽에서 사용해도 상관없다.
+            var name = 'conding everybody';
+        }
+        document.write(name);
+    </script>
+</body>
+</html>
