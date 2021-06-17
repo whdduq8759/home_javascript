@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function factory_movie(title) {
+            return {
+                get_title: function () {
+                    return title;
+                },
+                set_title: function (_title) {
+                    title = _title
+                }
+            }
+        }
+        ghost = factory_movie('Ghost in the shell');
+        matrix = factory_movie('Matrix');
+
+        alert(ghost.get_title());
+        alert(matrix.get_title());
+
+        ghost.set_title('공각기동대');
+
+        alert(ghost.get_title());
+        alert(matrix.get_title());
+        //함수안에 메소드를 설정해서 매개변수를 설정해서 출력하거나 수정해서 출력가능할 수 있다.
+    </script>
+</body>
+
+</html>
