@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //객체화란 객체안에 필요한 속성이나 메소드를 묶어서 표현한 것
+        var person = {
+            //속성
+            'name': 'egoing',
+            //메소드
+            'introduce': function () {
+                return 'My name is ' + this.name;
+            }
+        }
+        document.write(person.introduce());
+    </script>
+</body>
+
+</html>

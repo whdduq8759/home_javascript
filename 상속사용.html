@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //부모
+        function Person(name) {
+            this.name = name;
+        }
+        //상속가능한 객체와 메소드
+        Person.prototype.name = null;
+        Person.prototype.introduce = function () {
+            return 'My name is ' + this.name;
+        }
+
+        //자식
+        function Programmer(name) {
+            this.name = name;
+        }
+        //상속 받을 때 입력하는 것(중요!!!)
+        Programmer.prototype = new Person();
+
+        var p1 = new Programmer('egoing');
+        document.write(p1.introduce() + "<br />");
+    </script>
+</body>
+
+</html>

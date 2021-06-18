@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person() {}
+        // 생성자
+        // 생성자는 객체를 초기화 시켜주는 역할을 함ㄴ
+        var p = new Person();
+        p.name = 'egoing';
+        p.introduce = function () {
+            return 'My name is ' + this.name;
+        }
+        document.write(p.introduce());
+
+        //함수안에 매개변수를 설정해서 인자값을 생성자를 생성할 때 대입하는 것
+        function Person(name) {
+            this.name = name;
+            this.introduce = function () {
+                return 'My name is ' + this.name;
+            }
+        }
+        var p1 = new Person('egoing');
+        document.write(p1.introduce() + "<br />");
+
+        var p2 = new Person('leezche');
+        document.write(p2.introduce());
+    </script>
+</body>
+
+</html>

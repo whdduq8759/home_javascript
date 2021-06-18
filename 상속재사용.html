@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(name) {
+            this.name = name;
+        }
+        Person.prototype.name = null;
+        Person.prototype.introduce = function () {
+            return 'My name is ' + this.name + '<br>';
+        }
+
+        function Programmer(name) {
+            this.name = name;
+        }
+
+        Programmer.prototype = new Person();
+        //상속받은 것 이외에도 자식에서 다른 것을 설정할 수 있음!!
+        //함수이름.prototype.변수이름 = 값;
+        Programmer.prototype.coding = function () {
+            return "hello world";
+        }
+
+        function carfixer(name) {
+            this.name = name;
+        }
+        carfixer.prototype = new Person();
+        carfixer.prototype.fixing = function() {
+            return 'car fixed';
+        }
+        var p1 = new Programmer('egoing');
+        document.write(p1.introduce());
+        //자식에서 설정한 것을 실행 시키는 것
+        document.write(p1.coding());
+
+        var p2 = new carfixer('super');
+        document.write(p2.introduce());
+        document.write(p2.fixing());
+
+
+    </script>
+</body>
+
+</html>

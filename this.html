@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //객체
+        var o = {
+            //메소드
+            func: function () {
+                //함수 안에서의 this는 함수를 포함하는 위에 있는 객체(o)를 가르킨다
+                if (o === this) {
+                    document.write("o === this");
+                }
+            }
+        }
+        o.func();
+    //= window.func();
+    </script>
+</body>
+
+</html>

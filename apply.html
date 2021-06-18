@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var o = {}
+        var p = {}
+
+        function func() {
+            switch (this) {
+                case o:
+                    document.write('o<br />');
+                    break;
+                case p:
+                    document.write('p<br />');
+                    break;
+                case window:
+                    document.write('window<br />');
+                    break;
+            }
+        }
+        func();
+        // this = window
+        func.apply(o);
+        // this = o
+        func.apply(p);
+        // this = p
+
+        //표준 메소드인 apply는 기존의 값을 apply(값)으로 다시 설정하는 것(수정이라고 볼 수 있음)
+        //this의 유연성은 넓고 이 점을 이용하면 무궁무진하게 this를 이용하여 이로운 코드를 만들 수 있음
+
+    </script>
+</body>
+
+</html>

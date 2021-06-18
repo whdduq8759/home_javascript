@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum1(x, y) {
+            return x+y;
+        }
+       document.write(sum1(1, 2)); 
+       document.write('<br>');
+        // = 3
+
+        var sum2 = Function('x', 'y', 'return x+y;');
+        document.write(sum2(1, 2));
+        // = 3
+
+        //위의 sum1과 sum2의 값은 같음
+        //sum1은 함수의 표준대로 설정하여 한 것이고, sum2은 변수에 새로운 생성자를 만들고 생성자 안에 매개변수와 리턴값을 포함시키는 것임
+    </script>
+</body>
+</html>
