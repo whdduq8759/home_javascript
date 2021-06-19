@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Ultra 위에 부모는 없다. 그럼 누구에게 상속을 받는 존재인가?
+        // 그것은 기본적인 Object 객체이다.
+        // Object 객체는 모든 객체의 부모이다. (때문에 모든 객체를 담고 있음!!)
+        function Ultra() {}
+        Ultra.prototype.ultraProp = true;
+
+        // Ultra의 상속을 받음
+        function Super() {}
+        Super.prototype = new Ultra();
+        
+        // Super의 상속을 받음
+        function Sub() {}
+        Sub.prototype = new Super();
+
+        var o = new Sub();
+        console.log(o.ultraProp);
+    </script>
+</body>
+
+</html>
